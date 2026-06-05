@@ -405,7 +405,8 @@ footer p{color:var(--muted);font-size:.78rem}
     <div class="c-form reveal d2">
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.08em;margin-bottom:1.8rem">Tell me about your project</h3>
       <!-- FORMSPREE: go to formspree.io, create a free account, create a form, and replace xzdqderp below -->
-      <form action="https://formspree.io/f/xzdqderp" method="POST" onsubmit="handleSubmit(event,this)">
+      <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event,this)">
+        <input type="hidden" name="access_key" value="11692bdd-28ed-429c-941c-d7b1cb926a6f">
         <div class="f-row"><label>Your name</label><input type="text" name="name" placeholder="What's your name?" required></div>
         <div class="f-row"><label>Business</label><input type="text" name="business" placeholder="Your business or brand name"></div>
         <div class="f-row"><label>Service</label>
@@ -420,7 +421,7 @@ footer p{color:var(--muted);font-size:.78rem}
           </select>
         </div>
         <div class="f-row"><label>Message</label><textarea name="message" placeholder="Tell me about your brand, goals and approximate budget..." required></textarea></div>
-        <input type="hidden" name="_subject" value="New client inquiry — Azael Portfolio">
+        <input type="hidden" name="subject" value="New client inquiry — Azael Portfolio">
         <button class="f-submit" type="submit">Send message &rarr;</button>
       </form>
     </div>
