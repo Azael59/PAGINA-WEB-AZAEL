@@ -470,7 +470,7 @@ function closeMobile(){document.getElementById('mobileMenu').classList.remove('o
   },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal,.reveal-scale').forEach(function(el){io.observe(el)});
 })();
-var VIDEO_URLS={1:'REEL_1_URL.mp4',2:'REEL_2_URL.mp4',3:'HORIZ_VIDEO_URL.mp4'};
+var VIDEO_URLS={1:'https://youtube.com/shorts/oDRE1qwj4rQ',2:'https://youtube.com/shorts/iYhSk1ar8YY',3:'https://youtu.be/QODvHHkTNZs'};
 function activateVideo(n){
   var url=VIDEO_URLS[n],slot=document.getElementById('vslot'+n);
   if(!url||url.indexOf('_URL')!==-1){alert('Open the HTML file and replace the URL for video '+n+' in the VIDEO_URLS object at the top of the script.');return;}
