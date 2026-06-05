@@ -231,6 +231,23 @@ footer p{color:var(--muted);font-size:.78rem}
 .gif-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;font-family:'Bebas Neue',sans-serif;font-size:.85rem;letter-spacing:.1em;color:rgba(245,244,240,0.18)}
 @media(max-width:900px){.video-grid{grid-template-columns:1fr 1fr}.horiz-slot{grid-column:1/3}.gif-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:500px){.video-grid{grid-template-columns:1fr}.horiz-slot{grid-column:auto}.gif-grid{grid-template-columns:repeat(2,1fr)}}
+
+.lang-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:500;
+  letter-spacing:.08em;text-transform:uppercase;
+  color:var(--white);
+  padding:.35rem .9rem;border-radius:50px;
+  background:linear-gradient(135deg,rgba(187,0,255,0.15),rgba(235,30,136,0.12));
+  border:1px solid rgba(187,0,255,0.35);
+  box-shadow:0 0 12px rgba(187,0,255,0.25),0 0 24px rgba(235,30,136,0.12),inset 0 1px 0 rgba(255,255,255,0.15);
+  animation:badge-glow 3s ease-in-out infinite;
+  white-space:nowrap;
+}
+@keyframes badge-glow{
+  0%,100%{box-shadow:0 0 10px rgba(187,0,255,0.25),0 0 20px rgba(235,30,136,0.1);border-color:rgba(187,0,255,0.35)}
+  50%{box-shadow:0 0 20px rgba(187,0,255,0.5),0 0 40px rgba(235,30,136,0.25);border-color:rgba(235,30,136,0.5)}
+}
 </style>
 </head>
 <body>
@@ -403,7 +420,10 @@ footer p{color:var(--muted);font-size:.78rem}
       </div>
     </div>
     <div class="c-form reveal d2">
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.08em;margin-bottom:1.8rem">Tell me about your project</h3>
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.8rem">
+        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;letter-spacing:.08em">Tell me about your project</h3>
+        <span class="lang-badge">&#127757; EN &amp; ES</span>
+      </div>
       <!-- FORMSPREE: go to formspree.io, create a free account, create a form, and replace xzdqderp below -->
       <form action="https://api.web3forms.com/submit" method="POST" onsubmit="handleSubmit(event,this)">
         <input type="hidden" name="access_key" value="11692bdd-28ed-429c-941c-d7b1cb926a6f">
